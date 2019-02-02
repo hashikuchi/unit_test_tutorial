@@ -1,0 +1,2 @@
+const validatePassword = require("./passwordValidator");
+
