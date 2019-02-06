@@ -1,9 +1,5 @@
 const validatePassword = require("./passwordValidator");
 
-// パスワードが6文字以上かつ
-// 半角英数字のみを含む場合 true
-// それ以外の場合 false を返す
-
 test("パスワードが6文字以上ならばtrue", () => {
     expect(validatePassword("123Abc")).toBe(true);
 });
