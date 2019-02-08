@@ -15,3 +15,7 @@ test("パスワードが半角英数字のみを含むならばtrue", () => {
 test("パスワードが半角英数字以外を含むならばfalse", () => {
     expect(validatePassword("1234!ABcd")).toBe(false);
 });
+
+test("パスワードが文字列でないならば例外を投げる", () => {
+    expect(() => validatePassword({ a: 123 })).toThrowError("パスワードが文字列ではありません");
+});
